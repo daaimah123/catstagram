@@ -17,3 +17,15 @@ import React from 'react';
 import Header from './components/Header.jsx';
 import HomePage from './pages/HomePage.jsx';
 
+class App extends React.Component {
+    render() {
+        return (
+            <div> 
+                <Header />
+                <HomePage />
+            </div>
+        );
+    }
+}
+
+export default App;
