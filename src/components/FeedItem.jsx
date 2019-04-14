@@ -12,3 +12,17 @@
 	// Hint: what do you need in order to get likes to display in the Likes component?
 
 import React from 'react';
+import Likes from './Likes.jsx';
+
+class FeedItem extends Component {
+    render() {
+        return (
+            <div className="FeedItem">
+                <img className="Image" />
+                <Likes />
+            </div>
+        );
+    }
+}
+
+export default FeedItem;
