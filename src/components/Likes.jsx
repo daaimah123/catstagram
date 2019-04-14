@@ -20,7 +20,7 @@
 
 import React from 'react';
 
-class Likes extends Component {
+class Likes extends React.Component {
     render() {
     	return (
     		<div className="Likes">

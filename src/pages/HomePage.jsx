@@ -21,7 +21,7 @@ import ImageUploaderForm from '../components/ImageUploaderForm.jsx';
 import FeedList from '../components/FeedList';
 
 
-class HomePage extends Component {
+class HomePage extends React.Component {
     render() {
     	return (
     		<div className="HomePage"> 

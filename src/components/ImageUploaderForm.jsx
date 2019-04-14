@@ -36,7 +36,7 @@
 
 import React from 'react';
 
-class ImageUploaderForm extends Component {
+class ImageUploaderForm extends React.Component {
     render() {
     	return(
     		<form className="ImageUploaderForm">

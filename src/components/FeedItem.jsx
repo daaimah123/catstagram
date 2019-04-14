@@ -14,7 +14,7 @@
 import React from 'react';
 import Likes from './Likes.jsx';
 
-class FeedItem extends Component {
+class FeedItem extends React.Component {
     render() {
         return (
             <div className="FeedItem">
