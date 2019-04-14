@@ -20,7 +20,7 @@ import HomePage from './pages/HomePage.jsx';
 class App extends Component {
     render() {
         return (
-            <div>
+            <div> 
                 <Header />
                 <HomePage />
             </div>

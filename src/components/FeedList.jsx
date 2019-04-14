@@ -15,7 +15,7 @@ import FeedItem from './FeedItem.jsx';
 class FeedList extends Component {
     render() {
         return (
-            <div className="FeedList">
+            <div className="FeedList"> 
                 <FeedItem />
             </div>
         );

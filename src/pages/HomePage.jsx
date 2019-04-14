@@ -24,7 +24,7 @@ import FeedList from '../components/FeedList';
 class HomePage extends Component {
     render() {
     	return (
-    		<div className="HomePage">
+    		<div className="HomePage"> 
     			<ImageUploaderForm />
     			<FeedList />
     		</div>

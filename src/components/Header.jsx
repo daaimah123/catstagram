@@ -17,10 +17,10 @@ class Header extends Component {
     render() {
         return (
             <ul className="Header">
-                <li className="Logo">Catstagram</li>
-                <li>Home</li>
-                <li>About</li>
-                <li>Profile</li>
+                <li className="Logo">Catstagram </li>
+                <li>Home </li>
+                <li>About </li>
+                <li>Profile </li>
             </ul>
         );
     }

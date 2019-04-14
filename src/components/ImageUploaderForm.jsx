@@ -41,7 +41,7 @@ class ImageUploaderForm extends Component {
     	return(
     		<form className="ImageUploaderForm">
     			<input />
-    			<button>Submit</button>
+    			<button>Submit </button>
     		</form>
     	);
     }

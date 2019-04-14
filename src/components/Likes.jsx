@@ -24,7 +24,7 @@ class Likes extends Component {
     render() {
     	return (
     		<div className="Likes">
-    			<span># likes</span>
+    			<span>X likes</span>
     			<button className="LikesButton">
     				Like
     			</button>
