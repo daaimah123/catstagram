@@ -14,9 +14,23 @@ import FeedItem from './FeedItem.jsx';
 
 class FeedList extends React.Component {
     render() {
+
+        // destructure by pulling in photos from HomePage photos array
+        const { photos } = this.props;
+		//iterate over each image data from each element in array
+		const images = photos.map((singleImage, i) => 
+		//no curly brackets here because returning components
+			//console.log(image.id + " : " +  image.title) //want to show the id and title to be sure mapping works and show we have access to each photo element
+			//multiple instances so, assign it a unique of id of i (description='dataItemName')
+			//key is for react
+            <FeedItem key={i} imagePost={singleImage} />
+        )
+ 
+        //
         return (
             <div className="FeedList"> 
-                <FeedItem />
+                {/* <FeedItem /> dont need anymore because using in images above*/}
+                {images}
             </div>
         );
     }
