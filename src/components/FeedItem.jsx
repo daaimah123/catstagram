@@ -16,10 +16,17 @@ import Likes from './Likes.jsx';
 
 class FeedItem extends React.Component {
     render() {
+
+		// pulling in imagePost of key and imagePost from FeedList for use to create ind FeedItems
+		const { imagePost } = this.props;
+		//destruct imagePost in order to pass likes to Likes component
+		const {id, title, url, likes, userLiked} = imagePost;
+
         return (
             <div className="FeedItem">
-                <img className="Image" /> 
-                <Likes />
+                <h2>{imagePost.id}.{imagePost.title}</h2>
+				<img className="Image" src={imagePost.url}/> 				
+                <Likes likes={likes} userLiked={userLiked}/>
             </div>
         );
     }
