@@ -13,20 +13,40 @@
 	 // add a button to the rendered JSX with an onClick attribute
 	 // add a method to handle the click/ change the state
 	 // hook up the button text to the state
-// BONUS: Create a likes counter
+// TODO: BONUS: Create a likes counter
 	 // take in a prop for the number of likes
 	 // increase or decrease the likes based on whether button click is like/ unlike
 	 // hint: take the total likes as a prop, and convert it to state
-
+  /* this.setState((prevState) => {
+        return {
+            counter: prevState.counter + 1
+        }
+    }) */
 import React from 'react';
 
 class Likes extends React.Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			isLiked: false, 
+		}
+	}
+	
+	handleClick = () => {
+		this.setState ({
+			isLiked: !this.state.isLiked 
+		}) //set to be NOT the current state
+	}
+
     render() {
+		//pulling in destructed prop from FeedItem to use in Likes component
+		const { likes} = this.props;
+		
     	return (
     		<div className="Likes">
-    			<span>X likes</span>
-    			<button className="LikesButton">
-    				Like
+    			<span>{likes} likes</span>
+    			<button className="LikesButton" onClick={this.handleClick}>
+    				{this.state.isLiked ? "Liked!" : "Like?"}
     			</button>
     		</div>
     	);
