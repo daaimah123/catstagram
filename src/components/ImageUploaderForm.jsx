@@ -18,7 +18,7 @@
     // handleSubmit will be the one submitting - ie console.log the current url in the state for now.
 
 
-// Exercise 5: BONUS
+// TODO: Exercise 5: BONUS
 // Goal: make this form actually upload an image to the feed!
 // When a user inputs a full image url, it should update the
 // feed to include the image as a FeedItem!
@@ -34,14 +34,40 @@
     // takes the url of the photo updates photos state with by creating a new object in the photos data.
     // Make sure that function is called on handleSubmit in ImageUploaderForm!
 
+  
+
 import React from 'react';
 
 class ImageUploaderForm extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            url: ''
+        }
+    }
+
+    //grab the input of the form using .target.value
+    handleChange = (event) => {
+    this.setState({
+        url: event.target.value
+    });
+    }
+
+    //log the capturedinput to console, prevent reload
+    handleSubmit = (event) =>{
+        event.preventDefault();//should be first in function, or will still reload
+        console.log(this.state.url);
+    }
+
     render() {
     	return(
-    		<form className="ImageUploaderForm">
-    			<input />
-    			<button>Submit </button>
+    		<form className="ImageUploaderForm" onSubmit={this.handleSubmit}>
+    			<input
+                    type="text" 
+                    value={this.state.url} 
+                    onChange={this.handleChange}
+                />   
+    			<button type="submit" >Submit</button>
     		</form>
     	);
     }
